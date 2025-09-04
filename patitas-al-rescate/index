@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patitas al Rescate: ¡Tu Ayuda es su Esperanza!</title>
+    <!-- Incluye Tailwind CSS desde CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F3F4F6;
+        }
+        .hero-section {
+            background-image: url('PERROYGATO.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .card {
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .text-section {
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            background-color: #f7fafc;
+        }
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 256px;
+            overflow: hidden;
+            border-radius: 0.5rem;
+        }
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Sección de Cabecera (Hero Section) -->
+    <header class="hero-section text-white text-center py-20 px-4 md:py-32">
+        <div class="hero-overlay absolute inset-0"></div>
+        <div class="relative z-10">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">Patitas al Rescate: ¡Tu Ayuda es su Esperanza!</h1>
+            <p class="text-xl md:text-2xl font-light">Un llamado a la empatía en cualquier parte del mundo. ¿Viste un animal en apuros? ¡Tú puedes ser su héroe!</p>
+        </div>
+    </header>
+
+    <!-- Sección de Acciones Clave -->
+    <main class="container mx-auto px-4 py-12">
+        <section class="mb-12 text-center">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8">🆘 ¿Qué hacer si encuentras un animal en apuros?</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+                <!-- Tarjeta 1: Difundir -->
+                <div class="card rounded-lg p-6 text-center">
+                    <img src="https://placehold.co/96x96/FFF8DC/FF5733?text=Compartir" alt="Icono de compartir en redes sociales" class="w-24 h-24 mx-auto mb-4 rounded-full">
+                    <h3 class="text-xl font-semibold text-gray-700 mb-2">1. ¡Difunde la Voz, Pide Ayuda YA!</h3>
+                    <p class="text-gray-600">Si el animal está herido, enfermo o en peligro, lo primero es una foto o video y publicarlo en redes sociales. Busca grupos de rescate animal en tu ciudad en plataformas como Facebook, Instagram o WhatsApp. ¡Muchas personas y organizaciones ya están dispuestas a colaborar!</p>
+                </div>
+
+                <!-- Tarjeta 2: Veterinaria -->
+                <div class="card rounded-lg p-6 text-center">
+                    <img src="https://placehold.co/96x96/FFF8DC/FF5733?text=Veterinario" alt="Icono de cruz médica con una huella de patita" class="w-24 h-24 mx-auto mb-4 rounded-full">
+                    <h3 class="text-xl font-semibold text-gray-700 mb-2">2. Veterinaria: ¡La Salud es Prioridad!</h3>
+                    <p class="text-gray-600">Si tienes la posibilidad, llevarlo a una clínica veterinaria es el mejor primer paso. Aunque no tengas dinero, ¡no te rindas! La comunidad es generosa y a menudo se organizan colectas para cubrir los gastos.</p>
+                </div>
+
+                <!-- Tarjeta 3: Hogar Temporal -->
+                <div class="card rounded-lg p-6 text-center">
+                    <img src="https://placehold.co/96x96/FFF8DC/FF5733?text=Hogar" alt="Icono de casa con una huella de patita" class="w-24 h-24 mx-auto mb-4 rounded-full">
+                    <h3 class="text-xl font-semibold text-gray-700 mb-2">3. ¡Hogar Temporal: Un Refugio de Amor!</h3>
+                    <p class="text-gray-600">Ser un hogar temporal puede salvarle la vida. Con solo darle un lugar seguro para dormir, comida y agua, ya estás haciendo una diferencia enorme. Difunde su historia y fotos para que encuentre un hogar definitivo.</p>
+                </div>
+
+                <!-- Tarjeta 4: Otras Formas -->
+                <div class="card rounded-lg p-6 text-center">
+                    <img src="https://placehold.co/96x96/FFF8DC/FF5733?text=Granito" alt="Icono de objetos de ayuda: corazón, comida, medicinas" class="w-24 h-24 mx-auto mb-4 rounded-full">
+                    <h3 class="text-xl font-semibold text-gray-700 mb-2">4. ¡Muchas Formas de Ayudar: Tu Granito de Arena!</h3>
+                    <p class="text-gray-600">Dona alimentos o medicinas, sé voluntario (paseador, limpiador, curador) o simplemente, sé amable. El simple acto de no molestarlos ya es una forma de respeto y amor.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Sección de Testimonios y Esperanza -->
+        <section class="mb-12 text-center bg-white rounded-lg p-8 shadow-md">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8">💖 Un mensaje de corazón a corazón: ¡Cada acto cuenta!</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto mb-8">Cada uno de nosotros tiene el poder de cambiar la historia de un animal. No se trata de hacer todo, sino de **hacer algo**. Cada pequeño acto de bondad cuenta.</p>
+
+            <!-- Galería de Antes y Después de Flaca y sus bebés -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-center max-w-4xl mx-auto">
+                <div class="text-center">
+                    <h3 class="text-2xl font-bold mb-4">Historia de Flaca y sus bebés</h3>
+                    <div class="image-container mb-4">
+                        <img src="flacaesterilizada.jpg" alt="Flaca: antes del rescate">
+                    </div>
+                    <p class="text-gray-700">**Antes:** Flaca fue abandonada preñada en un aeropuerto. Tuvo 6 cachorros, 2 murieron atropellados. </p>
+                </div>
+                <div class="text-center">
+                    <h3 class="text-2xl font-bold mb-4">Cachorros en adopción</h3>
+                    <div class="image-container mb-4">
+                        <img src="bebe1.jpg" alt="Uno de los cachorros de Flaca">
+                    </div>
+                    <div class="image-container">
+                        <img src="bebe2.jpg" alt="Otro de los cachorros de Flaca">
+                    </div>
+                </div>
+                <div class="text-center">
+                    <h3 class="text-2xl font-bold mb-4">Flaca y su nueva vida</h3>
+                    <div class="image-container mb-4">
+                        <img src="flacadespues.jpg" alt="Flaca después del rescate, con un chaleco">
+                    </div>
+                    <p class="text-gray-700">**Después:** Los 4 cachorros restantes fueron dados en adopción. Flaca, esterilizada, encontró un hogar definitivo y está feliz.</p>
+                </div>
+            </div>
+            
+            <p class="text-gray-800 font-bold text-xl bg-orange-200 py-2 px-4 rounded-full inline-block mt-8">¡Tu ayuda lo hizo posible!</p>
+        </section>
+        
+        <!-- Sección de Tenencia Responsable y Seguimiento -->
+        <section class="bg-gray-200 p-8 rounded-lg shadow-md mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4 text-center">🌟 La Tenencia Responsable: Clave para el Rescate</h2>
+            <p class="text-gray-700 max-w-3xl mx-auto mb-6">Cuando un animal es rescatado y dado en adopción, el compromiso no termina ahí. Es fundamental un **seguimiento** para asegurar que esté en un hogar seguro y feliz. Las personas que adoptan deben aceptar:</p>
+            <ul class="list-disc list-inside text-left text-gray-700 max-w-2xl mx-auto">
+                <li>**Esterilizar o castrar** al animal para prevenir más camadas no deseadas.</li>
+                <li>Ponerle todas sus **vacunas y llevarlo a controles veterinarios** de rutina.</li>
+                <li>Darle **comida de calidad** y cuidados adecuados.</li>
+                <li>**Aceptar el seguimiento** por parte del rescatista, manteniendo el contacto para asegurar que el animal está bien cuidado.</li>
+            </ul>
+        </section>
+
+        <!-- Pie de página -->
+        <footer class="bg-gray-800 text-white text-center py-6 mt-12">
+            <p>&copy; 2025 Patitas al Rescate. Todos los derechos reservados. | **¡Recuerda: El respeto es el primer paso!**</p>
+        </footer>
+
+    </main>
+
+</body>
+</html>

@@ -1,157 +1,126 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Patitas al Rescate: ¡Tu Ayuda es su Esperanza!</title>
-    <!-- Incluye Tailwind CSS desde CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #F3F4F6;
-        }
-        .hero-section {
-            background-image: url('PERROYGATO.jpg');
-            background-size: cover;
-            background-position: center;
-            position: relative;
-        }
-        .hero-overlay {
-            background-color: rgba(0, 0, 0, 0.5);
-        }
-        .card {
-            background-color: #fff;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease-in-out;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-        }
-        .text-section {
-            padding: 1.5rem;
-            border-radius: 0.5rem;
-            background-color: #f7fafc;
-        }
-        .image-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 256px;
-            overflow: hidden;
-            border-radius: 0.5rem;
-        }
-        .image-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guía Universal de Rescate | Patitas al Rescate</title>
+  <meta name="description" content="Guía Universal de Rescate para ayudar animales en situación de riesgo, con kit básico, pasos de acción e historias reales de recuperación." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Inter', sans-serif; background: #f3f4f6; }
+    .hero {
+      background-image: linear-gradient(rgba(0,0,0,.58), rgba(0,0,0,.58)), url('PERROYGATO.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+    .card {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 10px 24px rgba(0,0,0,.08);
+      transition: transform .2s ease;
+    }
+    .card:hover { transform: translateY(-3px); }
+  </style>
 </head>
-<body class="bg-gray-100">
+<body class="text-gray-800">
+  <header class="hero text-white">
+    <div class="max-w-6xl mx-auto px-4 py-8">
+      <div class="mb-6 p-4 bg-white/90 rounded-xl text-gray-800">
+        <p class="text-sm font-semibold mb-2">🌎 Traducción instantánea</p>
+        <div id="google_translate_element"></div>
+      </div>
+      <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">Guía Universal de Rescate</h1>
+      <p class="text-lg md:text-2xl max-w-3xl">Un recurso abierto para actuar rápido y con empatía cuando encuentres un animal en peligro.</p>
+      <div class="mt-6 flex flex-wrap gap-3">
+        <a href="#kit" class="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-5 py-3 rounded-full">Ver Kit Básico</a>
+        <a href="#historias" class="bg-white text-gray-800 font-semibold px-5 py-3 rounded-full">Ver historia de Flaca</a>
+      </div>
+    </div>
+  </header>
 
-    <!-- Sección de Cabecera (Hero Section) -->
-    <header class="hero-section text-white text-center py-20 px-4 md:py-32">
-        <div class="hero-overlay absolute inset-0"></div>
-        <div class="relative z-10">
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">Patitas al Rescate: ¡Tu Ayuda es su Esperanza!</h1>
-            <p class="text-xl md:text-2xl font-light">Un llamado a la empatía en cualquier parte del mundo. ¿Viste un animal en apuros? ¡Tú puedes ser su héroe!</p>
-        </div>
-    </header>
+  <main class="max-w-6xl mx-auto px-4 py-10 space-y-10">
+    <section class="grid md:grid-cols-4 gap-4">
+      <article class="card rounded-xl p-4 text-center"><p class="text-3xl font-extrabold text-orange-500">1</p><p class="text-sm text-gray-600">Mamá rescatada</p></article>
+      <article class="card rounded-xl p-4 text-center"><p class="text-3xl font-extrabold text-orange-500">6</p><p class="text-sm text-gray-600">Cachorros nacidos</p></article>
+      <article class="card rounded-xl p-4 text-center"><p class="text-3xl font-extrabold text-orange-500">4</p><p class="text-sm text-gray-600">Cachorros adoptados</p></article>
+      <article class="card rounded-xl p-4 text-center"><p class="text-3xl font-extrabold text-orange-500">100%</p><p class="text-sm text-gray-600">Amor comunitario</p></article>
+    </section>
 
-    <!-- Sección de Acciones Clave -->
-    <main class="container mx-auto px-4 py-12">
-        <section class="mb-12 text-center">
-            <h2 class="text-3xl font-bold text-gray-800 mb-8">🆘 ¿Qué hacer si encuentras un animal en apuros?</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <section class="bg-white rounded-2xl p-6 shadow-sm">
+      <h2 class="text-3xl font-bold text-center mb-6">🆘 ¿Qué hacer al encontrar un animal en apuros?</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <article class="card rounded-xl p-4"><h3 class="font-bold mb-2">1) Proteger</h3><p class="text-sm text-gray-600">Aleja al animal del tránsito y dale un espacio seguro.</p></article>
+        <article class="card rounded-xl p-4"><h3 class="font-bold mb-2">2) Evaluar</h3><p class="text-sm text-gray-600">Observa heridas visibles y estado de hidratación.</p></article>
+        <article class="card rounded-xl p-4"><h3 class="font-bold mb-2">3) Veterinaria</h3><p class="text-sm text-gray-600">Prioriza atención médica si hay dolor o sangrado.</p></article>
+        <article class="card rounded-xl p-4"><h3 class="font-bold mb-2">4) Difundir</h3><p class="text-sm text-gray-600">Comparte fotos, ubicación y contacto para conseguir apoyo.</p></article>
+      </div>
+    </section>
 
-                <!-- Tarjeta 1: Difundir -->
-                <div class="card rounded-lg p-6 text-center">
-                    <img src="https://placehold.co/96x96/FFF8DC/FF5733?text=Compartir" alt="Icono de compartir en redes sociales" class="w-24 h-24 mx-auto mb-4 rounded-full">
-                    <h3 class="text-xl font-semibold text-gray-700 mb-2">1. ¡Difunde la Voz, Pide Ayuda YA!</h3>
-                    <p class="text-gray-600">Si el animal está herido, enfermo o en peligro, lo primero es una foto o video y publicarlo en redes sociales. Busca grupos de rescate animal en tu ciudad en plataformas como Facebook, Instagram o WhatsApp. ¡Muchas personas y organizaciones ya están dispuestas a colaborar!</p>
-                </div>
+    <section id="kit" class="bg-white rounded-2xl p-6 shadow-sm">
+      <h2 class="text-3xl font-bold text-center mb-6">🎒 Kit Básico de Rescate</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-4 text-center">
+        <article class="card rounded-xl p-5"><p class="text-4xl mb-2">🧣</p><h3 class="font-semibold">Manta</h3><p class="text-sm text-gray-600">Abrigar y calmar.</p></article>
+        <article class="card rounded-xl p-5"><p class="text-4xl mb-2">💧</p><h3 class="font-semibold">Agua</h3><p class="text-sm text-gray-600">Hidratación segura.</p></article>
+        <article class="card rounded-xl p-5"><p class="text-4xl mb-2">🥣</p><h3 class="font-semibold">Alimento</h3><p class="text-sm text-gray-600">Comida suave.</p></article>
+        <article class="card rounded-xl p-5"><p class="text-4xl mb-2">🦮</p><h3 class="font-semibold">Collar/Cuerda</h3><p class="text-sm text-gray-600">Traslado con control.</p></article>
+        <article class="card rounded-xl p-5"><p class="text-4xl mb-2">🩹</p><h3 class="font-semibold">Botiquín básico</h3><p class="text-sm text-gray-600">Gasas y antiséptico.</p></article>
+      </div>
+    </section>
 
-                <!-- Tarjeta 2: Veterinaria -->
-                <div class="card rounded-lg p-6 text-center">
-                    <img src="https://placehold.co/96x96/FFF8DC/FF5733?text=Veterinario" alt="Icono de cruz médica con una huella de patita" class="w-24 h-24 mx-auto mb-4 rounded-full">
-                    <h3 class="text-xl font-semibold text-gray-700 mb-2">2. Veterinaria: ¡La Salud es Prioridad!</h3>
-                    <p class="text-gray-600">Si tienes la posibilidad, llevarlo a una clínica veterinaria es el mejor primer paso. Aunque no tengas dinero, ¡no te rindas! La comunidad es generosa y a menudo se organizan colectas para cubrir los gastos.</p>
-                </div>
+    <section id="historias" class="bg-white rounded-2xl p-6 shadow-sm">
+      <h2 class="text-3xl font-bold text-center mb-2">💖 Historia de Flaca y futuros rescates</h2>
+      <p class="text-center text-gray-600 mb-8">Flaca es nuestro ejemplo principal: rescate, recuperación y adopción responsable.</p>
 
-                <!-- Tarjeta 3: Hogar Temporal -->
-                <div class="card rounded-lg p-6 text-center">
-                    <img src="https://placehold.co/96x96/FFF8DC/FF5733?text=Hogar" alt="Icono de casa con una huella de patita" class="w-24 h-24 mx-auto mb-4 rounded-full">
-                    <h3 class="text-xl font-semibold text-gray-700 mb-2">3. ¡Hogar Temporal: Un Refugio de Amor!</h3>
-                    <p class="text-gray-600">Ser un hogar temporal puede salvarle la vida. Con solo darle un lugar seguro para dormir, comida y agua, ya estás haciendo una diferencia enorme. Difunde su historia y fotos para que encuentre un hogar definitivo.</p>
-                </div>
+      <div class="grid md:grid-cols-3 gap-5 mb-8">
+        <figure class="space-y-2">
+          <img src="flacaesterilizada.jpg" alt="Flaca antes del rescate" class="rounded-xl h-64 w-full object-cover" loading="lazy" />
+          <figcaption class="text-sm"><strong>Antes:</strong> abandono y alto riesgo.</figcaption>
+        </figure>
+        <figure class="space-y-2">
+          <img src="bebe1.jpg" alt="Cachorro de Flaca en adopción" class="rounded-xl h-64 w-full object-cover" loading="lazy" />
+          <figcaption class="text-sm"><strong>Proceso:</strong> cuidado y difusión.</figcaption>
+        </figure>
+        <figure class="space-y-2">
+          <img src="bebe2.jpg" alt="Otro cachorro rescatado" class="rounded-xl h-64 w-full object-cover" loading="lazy" />
+          <figcaption class="text-sm"><strong>Resultado:</strong> nuevas oportunidades de vida.</figcaption>
+        </figure>
+      </div>
 
-                <!-- Tarjeta 4: Otras Formas -->
-                <div class="card rounded-lg p-6 text-center">
-                    <img src="https://placehold.co/96x96/FFF8DC/FF5733?text=Granito" alt="Icono de objetos de ayuda: corazón, comida, medicinas" class="w-24 h-24 mx-auto mb-4 rounded-full">
-                    <h3 class="text-xl font-semibold text-gray-700 mb-2">4. ¡Muchas Formas de Ayudar: Tu Granito de Arena!</h3>
-                    <p class="text-gray-600">Dona alimentos o medicinas, sé voluntario (paseador, limpiador, curador) o simplemente, sé amable. El simple acto de no molestarlos ya es una forma de respeto y amor.</p>
-                </div>
+      <h3 class="text-2xl font-bold mb-4">🐾 Próximamente más historias...</h3>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <article class="card rounded-xl p-3">
+          <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=%F0%9F%90%BE+Pr%C3%B3xima+Historia" alt="Espacio para próxima historia de rescate" class="rounded-lg w-full h-44 object-cover" loading="lazy" />
+          <p class="text-sm text-gray-600 mt-2">Espacio listo para foto + relato.</p>
+        </article>
+        <article class="card rounded-xl p-3">
+          <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=%F0%9F%90%BE+Pr%C3%B3xima+Historia" alt="Espacio para próxima historia de rescate" class="rounded-lg w-full h-44 object-cover" loading="lazy" />
+          <p class="text-sm text-gray-600 mt-2">Espacio listo para foto + relato.</p>
+        </article>
+        <article class="card rounded-xl p-3">
+          <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=%F0%9F%90%BE+Pr%C3%B3xima+Historia" alt="Espacio para próxima historia de rescate" class="rounded-lg w-full h-44 object-cover" loading="lazy" />
+          <p class="text-sm text-gray-600 mt-2">Espacio listo para foto + relato.</p>
+        </article>
+      </div>
+    </section>
+  </main>
 
-            </div>
-        </section>
+  <footer class="bg-gray-900 text-gray-200 py-8 mt-10 text-center">
+    <p class="font-semibold">Patitas al Rescate</p>
+    <p class="text-sm">Cada rescate empieza con una decisión de ayudar.</p>
+    <p class="text-xs text-gray-400">© 2026 Guía Universal de Rescate</p>
+  </footer>
 
-        <!-- Sección de Testimonios y Esperanza -->
-        <section class="mb-12 text-center bg-white rounded-lg p-8 shadow-md">
-            <h2 class="text-3xl font-bold text-gray-800 mb-8">💖 Un mensaje de corazón a corazón: ¡Cada acto cuenta!</h2>
-            <p class="text-gray-600 max-w-2xl mx-auto mb-8">Cada uno de nosotros tiene el poder de cambiar la historia de un animal. No se trata de hacer todo, sino de **hacer algo**. Cada pequeño acto de bondad cuenta.</p>
-
-            <!-- Galería de Antes y Después de Flaca y sus bebés -->
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-center max-w-4xl mx-auto">
-                <div class="text-center">
-                    <h3 class="text-2xl font-bold mb-4">Historia de Flaca y sus bebés</h3>
-                    <div class="image-container mb-4">
-                        <img src="flacaesterilizada.jpg" alt="Flaca: antes del rescate">
-                    </div>
-                    <p class="text-gray-700">**Antes:** Flaca fue abandonada preñada en un aeropuerto. Tuvo 6 cachorros, 2 murieron atropellados. </p>
-                </div>
-                <div class="text-center">
-                    <h3 class="text-2xl font-bold mb-4">Cachorros en adopción</h3>
-                    <div class="image-container mb-4">
-                        <img src="bebe1.jpg" alt="Uno de los cachorros de Flaca">
-                    </div>
-                    <div class="image-container">
-                        <img src="bebe2.jpg" alt="Otro de los cachorros de Flaca">
-                    </div>
-                </div>
-                <div class="text-center">
-                    <h3 class="text-2xl font-bold mb-4">Flaca y su nueva vida</h3>
-                    <div class="image-container mb-4">
-                        <img src="flacadespues.jpg" alt="Flaca después del rescate, con un chaleco">
-                    </div>
-                    <p class="text-gray-700">**Después:** Los 4 cachorros restantes fueron dados en adopción. Flaca, esterilizada, encontró un hogar definitivo y está feliz.</p>
-                </div>
-            </div>
-            
-            <p class="text-gray-800 font-bold text-xl bg-orange-200 py-2 px-4 rounded-full inline-block mt-8">¡Tu ayuda lo hizo posible!</p>
-        </section>
-        
-        <!-- Sección de Tenencia Responsable y Seguimiento -->
-        <section class="bg-gray-200 p-8 rounded-lg shadow-md mb-12">
-            <h2 class="text-3xl font-bold text-gray-800 mb-4 text-center">🌟 La Tenencia Responsable: Clave para el Rescate</h2>
-            <p class="text-gray-700 max-w-3xl mx-auto mb-6">Cuando un animal es rescatado y dado en adopción, el compromiso no termina ahí. Es fundamental un **seguimiento** para asegurar que esté en un hogar seguro y feliz. Las personas que adoptan deben aceptar:</p>
-            <ul class="list-disc list-inside text-left text-gray-700 max-w-2xl mx-auto">
-                <li>**Esterilizar o castrar** al animal para prevenir más camadas no deseadas.</li>
-                <li>Ponerle todas sus **vacunas y llevarlo a controles veterinarios** de rutina.</li>
-                <li>Darle **comida de calidad** y cuidados adecuados.</li>
-                <li>**Aceptar el seguimiento** por parte del rescatista, manteniendo el contacto para asegurar que el animal está bien cuidado.</li>
-            </ul>
-        </section>
-
-        <!-- Pie de página -->
-        <footer class="bg-gray-800 text-white text-center py-6 mt-12">
-            <p>&copy; 2025 Patitas al Rescate. Todos los derechos reservados. | **¡Recuerda: El respeto es el primer paso!**</p>
-        </footer>
-
-    </main>
-
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'es',
+        autoDisplay: false
+      }, 'google_translate_element');
+    }
+  </script>
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>

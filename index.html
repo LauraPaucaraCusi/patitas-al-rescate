@@ -1,168 +1,129 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Patitas al Rescate | Guía solidaria para rescatar, cuidar y dar en adopción</title>
-  <meta name="description" content="Patitas al Rescate comparte pasos claros para ayudar animales en situación de calle: primeros auxilios, difusión, hogar temporal, adopción responsable y seguimiento.">
-  <meta name="theme-color" content="#f97316">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guía Universal de Rescate | Patitas al Rescate</title>
+  <meta name="description" content="Guía Universal de Rescate para ayudar animales en situación de riesgo, con kit básico, pasos de acción e historias reales de recuperación." />
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
   <style>
-    :root {
-      --brand: #f97316;
-      --brand-dark: #c2410c;
-      --ink: #1f2937;
-    }
-    body {
-      font-family: 'Inter', sans-serif;
-      color: var(--ink);
-      background: #f3f4f6;
-    }
+    body { font-family: 'Inter', sans-serif; background: #f3f4f6; }
     .hero {
-      background-image: linear-gradient(rgba(0, 0, 0, .55), rgba(0, 0, 0, .6)), url('PERROYGATO.jpg');
+      background-image: linear-gradient(rgba(0,0,0,.58), rgba(0,0,0,.58)), url('PERROYGATO.jpg');
       background-size: cover;
       background-position: center;
     }
     .card {
       background: #fff;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, .08);
-      border: 1px solid #f3f4f6;
-      transition: transform .2s ease, box-shadow .2s ease;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 10px 24px rgba(0,0,0,.08);
+      transition: transform .2s ease;
     }
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 26px rgba(0, 0, 0, .12);
-    }
-    .btn-primary { background: var(--brand); }
-    .btn-primary:hover { background: var(--brand-dark); }
-    .skip-link {
-      position: absolute;
-      left: -9999px;
-      top: 0;
-      background: #111827;
-      color: #fff;
-      padding: .75rem 1rem;
-      z-index: 50;
-      border-radius: .5rem;
-    }
-    .skip-link:focus { left: .75rem; top: .75rem; }
+    .card:hover { transform: translateY(-3px); }
   </style>
 </head>
-<body>
-  <a href="#contenido" class="skip-link">Saltar al contenido principal</a>
-
-  <nav class="bg-white/95 backdrop-blur sticky top-0 z-40 border-b border-gray-200">
-    <div class="max-w-6xl mx-auto px-4 py-3 flex flex-wrap items-center justify-between gap-3">
-      <p class="font-bold text-gray-800">🐾 Patitas al Rescate</p>
-      <div class="flex flex-wrap gap-2 text-sm">
-        <a class="px-3 py-1 rounded-full bg-gray-100 hover:bg-gray-200" href="#guia">Guía</a>
-        <a class="px-3 py-1 rounded-full bg-gray-100 hover:bg-gray-200" href="#historia">Historia</a>
-        <a class="px-3 py-1 rounded-full bg-gray-100 hover:bg-gray-200" href="#publicar">Publicar</a>
-        <a class="px-3 py-1 rounded-full bg-gray-100 hover:bg-gray-200" href="#ayuda">Ayudar</a>
-      </div>
-    </div>
-  </nav>
-
+<body class="text-gray-800">
   <header class="hero text-white">
-    <div class="max-w-6xl mx-auto px-4 py-20 md:py-28 text-center">
-      <p class="font-semibold tracking-wide uppercase text-orange-200 mb-4">Proyecto comunitario</p>
-      <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6">Patitas al Rescate</h1>
-      <p class="text-lg md:text-2xl max-w-3xl mx-auto">Un recurso simple para que más personas sepan cómo actuar cuando encuentran un animal en riesgo.</p>
-      <div class="mt-8 flex flex-wrap justify-center gap-3">
-        <a href="#guia" class="btn-primary text-white font-semibold px-6 py-3 rounded-full">Ver guía rápida</a>
-        <a href="#publicar" class="bg-white text-gray-800 font-semibold px-6 py-3 rounded-full">Dónde publicarlo</a>
+    <div class="max-w-6xl mx-auto px-4 py-8">
+      <div class="mb-6 p-4 bg-white/90 rounded-xl text-gray-800">
+        <p class="text-sm font-semibold mb-2">🌎 Traducción instantánea</p>
+        <div id="google_translate_element"></div>
+      </div>
+      <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">Guía Universal de Rescate</h1>
+      <p class="text-lg md:text-2xl max-w-3xl">Un recurso abierto para actuar rápido y con empatía cuando encuentres un animal en peligro.</p>
+      <div class="mt-6 flex flex-wrap gap-3">
+        <a href="#kit" class="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-5 py-3 rounded-full">Ver Kit Básico</a>
+        <a href="#historias" class="bg-white text-gray-800 font-semibold px-5 py-3 rounded-full">Ver historia de Flaca</a>
       </div>
     </div>
   </header>
 
-  <main id="contenido" class="max-w-6xl mx-auto px-4 py-12 space-y-12">
-    <section class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4" aria-label="Impacto del rescate">
-      <article class="card rounded-xl p-5 text-center"><p class="text-3xl font-extrabold text-orange-500">6</p><p class="text-sm text-gray-600">Cachorros nacidos</p></article>
-      <article class="card rounded-xl p-5 text-center"><p class="text-3xl font-extrabold text-orange-500">4</p><p class="text-sm text-gray-600">Cachorros adoptados</p></article>
-      <article class="card rounded-xl p-5 text-center"><p class="text-3xl font-extrabold text-orange-500">1</p><p class="text-sm text-gray-600">Mamá esterilizada y a salvo</p></article>
-      <article class="card rounded-xl p-5 text-center"><p class="text-3xl font-extrabold text-orange-500">100%</p><p class="text-sm text-gray-600">Hecho con amor comunitario</p></article>
+  <main class="max-w-6xl mx-auto px-4 py-10 space-y-10">
+    <section class="grid md:grid-cols-4 gap-4">
+      <article class="card rounded-xl p-4 text-center"><p class="text-3xl font-extrabold text-orange-500">1</p><p class="text-sm text-gray-600">Mamá rescatada</p></article>
+      <article class="card rounded-xl p-4 text-center"><p class="text-3xl font-extrabold text-orange-500">6</p><p class="text-sm text-gray-600">Cachorros nacidos</p></article>
+      <article class="card rounded-xl p-4 text-center"><p class="text-3xl font-extrabold text-orange-500">4</p><p class="text-sm text-gray-600">Cachorros adoptados</p></article>
+      <article class="card rounded-xl p-4 text-center"><p class="text-3xl font-extrabold text-orange-500">100%</p><p class="text-sm text-gray-600">Amor comunitario</p></article>
     </section>
 
-    <section id="guia" class="bg-white rounded-2xl p-6 md:p-8 shadow-sm">
-      <h2 class="text-3xl font-bold mb-6 text-center">🆘 Guía rápida: ¿qué hacer al encontrar un animal en apuros?</h2>
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
-        <article class="card rounded-xl p-5"><h3 class="font-bold text-lg mb-2">1) Evalúa y protege</h3><p class="text-sm text-gray-600">Revisa si hay riesgo de tránsito o agresión. Muévelo solo si es seguro. Agua, sombra y calma primero.</p></article>
-        <article class="card rounded-xl p-5"><h3 class="font-bold text-lg mb-2">2) Atención veterinaria</h3><p class="text-sm text-gray-600">Si está herido o muy débil, busca clínica de inmediato. Pide apoyo comunitario para cubrir gastos.</p></article>
-        <article class="card rounded-xl p-5"><h3 class="font-bold text-lg mb-2">3) Difunde con datos</h3><p class="text-sm text-gray-600">Publica fotos claras, ubicación, estado de salud y contacto. Eso acelera ayuda y adopción.</p></article>
-        <article class="card rounded-xl p-5"><h3 class="font-bold text-lg mb-2">4) Hogar temporal</h3><p class="text-sm text-gray-600">Un espacio seguro, comida y seguimiento pueden salvar su vida mientras llega la familia definitiva.</p></article>
-      </div>
-      <div class="mt-6 bg-orange-50 border border-orange-100 rounded-xl p-4">
-        <h3 class="font-bold mb-2">Plantilla para publicar un caso</h3>
-        <p class="text-sm text-gray-700">"URGENTE | [Ciudad, zona] Perro/gato encontrado [fecha]. Estado: [herido/desnutrido/estable]. Necesita: [veterinaria/hogar temporal/adopción]. Contacto: [teléfono/Instagram]."</p>
+    <section class="bg-white rounded-2xl p-6 shadow-sm">
+      <h2 class="text-3xl font-bold text-center mb-6">🆘 ¿Qué hacer al encontrar un animal en apuros?</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <article class="card rounded-xl p-4"><h3 class="font-bold mb-2">1) Proteger</h3><p class="text-sm text-gray-600">Aleja al animal del tránsito y dale un espacio seguro.</p></article>
+        <article class="card rounded-xl p-4"><h3 class="font-bold mb-2">2) Evaluar</h3><p class="text-sm text-gray-600">Observa heridas visibles y estado de hidratación.</p></article>
+        <article class="card rounded-xl p-4"><h3 class="font-bold mb-2">3) Veterinaria</h3><p class="text-sm text-gray-600">Prioriza atención médica si hay dolor o sangrado.</p></article>
+        <article class="card rounded-xl p-4"><h3 class="font-bold mb-2">4) Difundir</h3><p class="text-sm text-gray-600">Comparte fotos, ubicación y contacto para conseguir apoyo.</p></article>
       </div>
     </section>
 
-    <section id="historia" class="bg-white rounded-2xl p-6 md:p-8 shadow-sm">
-      <h2 class="text-3xl font-bold mb-2 text-center">💖 Historia real: Flaca y sus bebés</h2>
-      <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">Flaca fue abandonada preñada en un aeropuerto. Tras el rescate, atención y acompañamiento, sus cachorros fueron adoptados y ella hoy vive esterilizada, cuidada y feliz.</p>
-      <div class="grid md:grid-cols-3 gap-6">
-        <figure class="space-y-3"><img src="flacaesterilizada.jpg" alt="Flaca antes del rescate" class="rounded-xl h-64 w-full object-cover" loading="lazy"><figcaption class="text-sm text-gray-700"><strong>Antes:</strong> situación de abandono y riesgo.</figcaption></figure>
-        <figure class="space-y-3"><img src="bebe1.jpg" alt="Cachorro en adopción" class="rounded-xl h-64 w-full object-cover" loading="lazy"><figcaption class="text-sm text-gray-700"><strong>Proceso:</strong> difusión y hogares temporales.</figcaption></figure>
-        <figure class="space-y-3"><img src="flacadespues.jpg" alt="Flaca luego del rescate" class="rounded-xl h-64 w-full object-cover" loading="lazy"><figcaption class="text-sm text-gray-700"><strong>Después:</strong> adopciones responsables y final feliz.</figcaption></figure>
+    <section id="kit" class="bg-white rounded-2xl p-6 shadow-sm">
+      <h2 class="text-3xl font-bold text-center mb-6">🎒 Kit Básico de Rescate</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-4 text-center">
+        <article class="card rounded-xl p-5"><p class="text-4xl mb-2">🧣</p><h3 class="font-semibold">Manta</h3><p class="text-sm text-gray-600">Abrigar y calmar.</p></article>
+        <article class="card rounded-xl p-5"><p class="text-4xl mb-2">💧</p><h3 class="font-semibold">Agua</h3><p class="text-sm text-gray-600">Hidratación segura.</p></article>
+        <article class="card rounded-xl p-5"><p class="text-4xl mb-2">🥣</p><h3 class="font-semibold">Alimento</h3><p class="text-sm text-gray-600">Comida suave.</p></article>
+        <article class="card rounded-xl p-5"><p class="text-4xl mb-2">🦮</p><h3 class="font-semibold">Collar/Cuerda</h3><p class="text-sm text-gray-600">Traslado con control.</p></article>
+        <article class="card rounded-xl p-5"><p class="text-4xl mb-2">🩹</p><h3 class="font-semibold">Botiquín básico</h3><p class="text-sm text-gray-600">Gasas y antiséptico.</p></article>
       </div>
     </section>
 
-    <section class="grid lg:grid-cols-2 gap-6">
-      <article class="bg-white rounded-2xl p-6 md:p-8 shadow-sm">
-        <h2 class="text-2xl font-bold mb-4">✅ Checklist para adopción responsable</h2>
-        <ul class="space-y-3 text-gray-700">
-          <li>• Compromiso de esterilización o castración.</li>
-          <li>• Esquema de vacunas y controles veterinarios.</li>
-          <li>• Alimentación adecuada y entorno seguro.</li>
-          <li>• Seguimiento con fotos y contacto periódico.</li>
-          <li>• Educación con respeto y sin violencia.</li>
-        </ul>
-      </article>
-      <article id="ayuda" class="bg-orange-50 rounded-2xl p-6 md:p-8 border border-orange-100">
-        <h2 class="text-2xl font-bold mb-4">📣 ¿Cómo colaborar ahora?</h2>
-        <p class="text-gray-700 mb-4">Si quieres sumar tu ayuda, comparte esta página y súmate con uno de estos aportes:</p>
-        <ul class="space-y-2 text-gray-700 mb-6">
-          <li>• Traslados a veterinaria.</li>
-          <li>• Donación de alimento o medicinas.</li>
-          <li>• Hogar temporal.</li>
-          <li>• Difusión de casos en adopción.</li>
-        </ul>
-        <div class="flex flex-wrap gap-3">
-          <a class="inline-block btn-primary text-white font-semibold px-5 py-3 rounded-full" href="mailto:contacto@patitasalrescate.org">Quiero ayudar</a>
-          <a class="inline-block bg-white text-gray-800 font-semibold px-5 py-3 rounded-full border border-gray-200" href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">Compartir en Instagram</a>
-        </div>
-      </article>
-    </section>
+    <section id="historias" class="bg-white rounded-2xl p-6 shadow-sm">
+      <h2 class="text-3xl font-bold text-center mb-2">💖 Historia de Flaca y futuros rescates</h2>
+      <p class="text-center text-gray-600 mb-8">Flaca es nuestro ejemplo principal: rescate, recuperación y adopción responsable.</p>
 
-    <section id="publicar" class="bg-white rounded-2xl p-6 md:p-8 shadow-sm">
-      <h2 class="text-3xl font-bold mb-6 text-center">🚀 Dónde publicar este proyecto (recomendado)</h2>
-      <div class="grid md:grid-cols-3 gap-4">
-        <article class="card rounded-xl p-5">
-          <h3 class="font-bold text-lg">GitHub Pages</h3>
-          <p class="text-sm text-gray-600 mt-2">Ideal si ya usas GitHub. Gratis, simple y perfecto para sitios estáticos como este.</p>
+      <div class="grid md:grid-cols-3 gap-5 mb-8">
+        <figure class="space-y-2">
+          <img src="flacaesterilizada.jpg" alt="Flaca antes del rescate" class="rounded-xl h-64 w-full object-cover" loading="lazy" />
+          <figcaption class="text-sm"><strong>Antes:</strong> abandono y alto riesgo.</figcaption>
+        </figure>
+        <figure class="space-y-2">
+          <img src="bebe1.jpg" alt="Cachorro de Flaca en adopción" class="rounded-xl h-64 w-full object-cover" loading="lazy" />
+          <figcaption class="text-sm"><strong>Proceso:</strong> cuidado y difusión.</figcaption>
+        </figure>
+        <figure class="space-y-2">
+          <img src="bebe2.jpg" alt="Otro cachorro rescatado" class="rounded-xl h-64 w-full object-cover" loading="lazy" />
+          <figcaption class="text-sm"><strong>Resultado:</strong> nuevas oportunidades de vida.</figcaption>
+        </figure>
+      </div>
+
+      <h3 class="text-2xl font-bold mb-4">🐾 Próximamente más historias...</h3>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <article class="card rounded-xl p-3">
+          <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=%F0%9F%90%BE+Pr%C3%B3xima+Historia" alt="Espacio para próxima historia de rescate" class="rounded-lg w-full h-44 object-cover" loading="lazy" />
+          <p class="text-sm text-gray-600 mt-2">Espacio listo para foto + relato.</p>
         </article>
-        <article class="card rounded-xl p-5">
-          <h3 class="font-bold text-lg">Netlify</h3>
-          <p class="text-sm text-gray-600 mt-2">Muy fácil para arrancar. Despliegue automático desde GitHub y HTTPS incluido.</p>
+        <article class="card rounded-xl p-3">
+          <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=%F0%9F%90%BE+Pr%C3%B3xima+Historia" alt="Espacio para próxima historia de rescate" class="rounded-lg w-full h-44 object-cover" loading="lazy" />
+          <p class="text-sm text-gray-600 mt-2">Espacio listo para foto + relato.</p>
         </article>
-        <article class="card rounded-xl p-5">
-          <h3 class="font-bold text-lg">Vercel</h3>
-          <p class="text-sm text-gray-600 mt-2">Excelente rendimiento y previsualización por cada cambio que subas.</p>
+        <article class="card rounded-xl p-3">
+          <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=%F0%9F%90%BE+Pr%C3%B3xima+Historia" alt="Espacio para próxima historia de rescate" class="rounded-lg w-full h-44 object-cover" loading="lazy" />
+          <p class="text-sm text-gray-600 mt-2">Espacio listo para foto + relato.</p>
         </article>
       </div>
-      <p class="text-sm text-gray-700 mt-6">Tip: publica primero en Netlify por rapidez y luego conecta un dominio propio cuando el proyecto crezca.</p>
     </section>
   </main>
 
-  <footer class="bg-gray-900 text-gray-200 py-8 mt-12">
-    <div class="max-w-6xl mx-auto px-4 text-center space-y-2">
-      <p class="font-semibold">Patitas al Rescate</p>
-      <p class="text-sm">Cada vida importa. Rescatar también es educar y crear comunidad.</p>
-      <p class="text-xs text-gray-400">© 2026 Patitas al Rescate</p>
-    </div>
+  <footer class="bg-gray-900 text-gray-200 py-8 mt-10 text-center">
+    <p class="font-semibold">Patitas al Rescate</p>
+    <p class="text-sm">Cada rescate empieza con una decisión de ayudar.</p>
+    <p class="text-xs text-gray-400">© 2026 Guía Universal de Rescate</p>
   </footer>
+
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'es',
+        autoDisplay: false
+      }, 'google_translate_element');
+    }
+  </script>
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>
+
 </body>
 </html>

@@ -1,31 +1,27 @@
-# Patitas al Rescate
+# Guía Universal de Rescate
 
-Landing estática para difundir rescates, promover adopción responsable y movilizar ayuda comunitaria.
+Este proyecto es una página web comunitaria creada para orientar rescates de animales en situación de riesgo de forma clara, rápida y empática.
 
-## Publicación recomendada
+## Objetivo
+Ofrecer una guía sencilla y visual que cualquier persona pueda usar para:
+- actuar ante una emergencia,
+- asistir con un kit básico,
+- difundir casos urgentes,
+- inspirar nuevos rescates a través de historias reales.
 
-### Opción 1 (rápida): Netlify
-1. Crea una cuenta en Netlify.
-2. Conecta este repositorio.
-3. Build command: *(vacío)*.
-4. Publish directory: `/`.
-5. Deploy.
+## Estructura de la guía
+- **Traducción instantánea** con widget de Google Translate para acceso global.
+- **Pasos de acción inmediata** ante un rescate.
+- **Kit Básico de Rescate** (manta, agua, alimento, collar/cuerda y botiquín).
+- **Historia de Flaca** como caso principal de recuperación.
+- **Espacios “Próximamente más historias...”** listos para añadir nuevas fotos y relatos.
 
-### Opción 2: GitHub Pages
-1. Sube cambios al branch principal.
-2. En GitHub: **Settings → Pages**.
-3. Source: `Deploy from a branch`.
-4. Branch: `main` (root).
-5. Guarda y espera la URL pública.
+## Personalización
+Puedes adaptar fácilmente:
+- textos y mensajes del hero,
+- estadísticas de impacto,
+- imágenes de historias,
+- datos de contacto de apoyo.
 
-### Opción 3: Vercel
-1. Importa el proyecto desde GitHub.
-2. Framework preset: `Other`.
-3. Build command: *(vacío)*.
-4. Output directory: `/`.
-5. Deploy.
-
-## Personalización rápida
-- Reemplaza el correo en `mailto:` por tu contacto real.
-- Ajusta estadísticas de impacto a tus datos actuales.
-- Si tienes redes del proyecto, cambia enlaces de compartir por tus perfiles.
+## Propósito social
+La Guía Universal de Rescate busca que más personas se animen a ayudar con seguridad, organización y respeto por la vida animal.
